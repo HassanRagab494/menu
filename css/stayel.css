@@ -1,0 +1,329 @@
+/* ===== FONTS ===== */
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&display=swap');
+
+/* ===== ROOT VARIABLES ===== */
+:root {
+  --green-dark:   #085041;
+  --green-main:   #0F6E56;
+  --green-mid:    #1D9E75;
+  --green-light:  #9FE1CB;
+  --green-bg:     #e6f5ef;
+  --cream-bg:     #f5f0e8;
+  --cream-border: #e8e0d0;
+  --text-main:    #1a1a1a;
+  --text-muted:   #6b7280;
+  --white:        #ffffff;
+}
+
+/* ===== BASE ===== */
+* { box-sizing: border-box; }
+
+body {
+  font-family: 'Cairo', sans-serif;
+  background: var(--cream-bg);
+  color: var(--text-main);
+  min-height: 100vh;
+  direction: rtl;
+}
+
+/* ===== NAVBAR ===== */
+.navbar-custom {
+  background: var(--green-main);
+  padding: 0.9rem 1rem;
+}
+.navbar-custom .navbar-brand {
+  color: #fff;
+  font-size: 17px;
+  font-weight: 700;
+}
+.navbar-custom .btn-nav-outline {
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.4);
+  background: rgba(255,255,255,0.1);
+  font-family: 'Cairo', sans-serif;
+  font-size: 13px;
+  padding: 5px 14px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background .2s;
+}
+.navbar-custom .btn-nav-outline:hover {
+  background: rgba(255,255,255,0.25);
+}
+
+/* ===== HERO (menu page) ===== */
+.menu-hero {
+  background: var(--green-main);
+  padding: 2.5rem 1rem 3rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.menu-hero::before {
+  content: '';
+  position: absolute;
+  top: -50px; left: -50px;
+  width: 200px; height: 200px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.05);
+}
+.menu-hero::after {
+  content: '';
+  position: absolute;
+  bottom: -70px; right: -40px;
+  width: 240px; height: 240px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.04);
+}
+.menu-hero .hero-icon  { font-size: 50px; display: block; margin-bottom: 6px; position: relative; z-index: 1; }
+.menu-hero h1          { font-size: 26px; font-weight: 700; color: #fff; position: relative; z-index: 1; }
+.menu-hero p           { font-size: 13px; color: var(--green-light); margin-top: 4px; position: relative; z-index: 1; }
+
+/* ===== STAT CARDS ===== */
+.stat-card {
+  background: var(--white);
+  border: 1px solid var(--cream-border);
+  border-radius: 12px;
+  padding: 14px 10px;
+  text-align: center;
+}
+.stat-card .stat-num {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--green-main);
+  line-height: 1.2;
+}
+.stat-card .stat-lbl {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+/* ===== CARDS ===== */
+.custom-card {
+  background: var(--white);
+  border: 1px solid var(--cream-border);
+  border-radius: 14px;
+  padding: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+.custom-card .card-title-custom {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--green-main);
+  padding-bottom: 10px;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid var(--cream-border);
+}
+
+/* ===== FORM ELEMENTS ===== */
+.form-control-custom,
+.form-select-custom {
+  width: 100%;
+  padding: 9px 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-family: 'Cairo', sans-serif;
+  font-size: 14px;
+  color: var(--text-main);
+  background: #fafaf8;
+  outline: none;
+  transition: border-color .2s, box-shadow .2s;
+}
+.form-control-custom:focus,
+.form-select-custom:focus {
+  border-color: var(--green-main);
+  box-shadow: 0 0 0 3px rgba(15,110,86,.1);
+  background: #fff;
+}
+
+/* ===== BUTTONS ===== */
+.btn-green {
+  background: var(--green-main);
+  color: #fff;
+  border: none;
+  font-family: 'Cairo', sans-serif;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: background .2s, transform .1s;
+}
+.btn-green:hover  { background: var(--green-dark); color: #fff; }
+.btn-green:active { transform: scale(0.98); }
+
+.btn-outline-cream {
+  background: #f0ece4;
+  color: var(--text-main);
+  border: 1px solid var(--cream-border);
+  font-family: 'Cairo', sans-serif;
+  font-weight: 500;
+  border-radius: 8px;
+  transition: background .2s;
+}
+.btn-outline-cream:hover { background: #e8e0d4; }
+
+/* ===== CATEGORY LABEL ===== */
+.cat-label {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--green-main);
+  letter-spacing: .4px;
+  padding-bottom: 7px;
+  margin: 1.2rem 0 8px;
+  border-bottom: 2px solid var(--green-main);
+}
+
+/* ===== MENU ITEM CARD ===== */
+.menu-item-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--white);
+  border-radius: 12px;
+  padding: 13px 16px;
+  margin-bottom: 8px;
+  border: 1px solid var(--cream-border);
+}
+.menu-item-card .item-name  { font-size: 15px; font-weight: 500; }
+.menu-item-card .item-price { font-size: 15px; font-weight: 700; color: var(--green-main); white-space: nowrap; margin-right: 10px; }
+
+/* ===== ADMIN ITEM ROW ===== */
+.admin-item-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid #f0ece4;
+}
+.admin-item-row:last-child { border-bottom: none; }
+.admin-item-row .item-name-admin { font-size: 14px; font-weight: 500; }
+.admin-item-row .item-meta       { font-size: 12px; color: var(--text-muted); margin-top: 2px; }
+
+/* ===== BADGE ===== */
+.badge-cat {
+  display: inline-block;
+  font-size: 11px;
+  padding: 2px 9px;
+  border-radius: 20px;
+  background: var(--green-bg);
+  color: var(--green-main);
+  font-weight: 600;
+  margin-left: 6px;
+}
+
+/* ===== TOAST ===== */
+.toast-custom {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--green-main);
+  color: #fff;
+  padding: 10px 22px;
+  border-radius: 10px;
+  font-size: 13px;
+  font-family: 'Cairo', sans-serif;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 9999;
+  white-space: nowrap;
+  transition: opacity .3s;
+}
+.toast-custom.show { opacity: 1; }
+
+/* ===== FOOTER ===== */
+.menu-footer {
+  text-align: center;
+  font-size: 12px;
+  color: var(--text-muted);
+  padding: 1rem;
+  margin-top: 1rem;
+  border-top: 1px solid var(--cream-border);
+}
+
+/* ===== SNAPSHOT (hidden — for image export) ===== */
+#snapshot-target {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  width: 400px;
+  background: var(--cream-bg);
+  font-family: 'Cairo', sans-serif;
+  padding-bottom: 24px;
+}
+#snapshot-target .snap-hero {
+  background: var(--green-main);
+  padding: 2rem 1.5rem 2.5rem;
+  text-align: center;
+}
+#snapshot-target .snap-hero .icon { font-size: 40px; display: block; margin-bottom: 6px; }
+#snapshot-target .snap-hero h1    { font-size: 22px; font-weight: 700; color: #fff; }
+#snapshot-target .snap-hero p     { font-size: 13px; color: var(--green-light); margin-top: 4px; }
+#snapshot-target .snap-body       { padding: 1rem; }
+#snapshot-target .snap-cat-title  {
+  font-size: 12px; font-weight: 700; color: var(--green-main);
+  border-bottom: 2px solid var(--green-main);
+  padding-bottom: 6px; margin: 1rem 0 8px;
+}
+#snapshot-target .snap-item {
+  display: flex; justify-content: space-between;
+  background: #fff; border-radius: 10px;
+  padding: 11px 14px; margin-bottom: 6px;
+  border: 1px solid var(--cream-border);
+}
+#snapshot-target .snap-item .sname  { font-size: 14px; font-weight: 500; }
+#snapshot-target .snap-item .sprice { font-size: 14px; font-weight: 700; color: var(--green-main); }
+#snapshot-target .snap-footer {
+  text-align: center; font-size: 12px;
+  color: var(--text-muted); margin-top: 1rem;
+}
+
+/* ===== RESPONSIVE TWEAKS ===== */
+@media (max-width: 576px) {
+  .menu-hero h1    { font-size: 22px; }
+  .stat-card .stat-num { font-size: 18px; }
+  .menu-item-card .item-name  { font-size: 14px; }
+  .menu-item-card .item-price { font-size: 14px; }
+}
+
+/* ===== PASSWORD GATE ===== */
+.password-gate {
+  position: fixed;
+  inset: 0;
+  background: var(--cream-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  padding: 1rem;
+}
+.password-box {
+  background: var(--white);
+  border: 1px solid var(--cream-border);
+  border-radius: 16px;
+  padding: 2rem 1.5rem;
+  width: 100%;
+  max-width: 360px;
+  text-align: center;
+}
+.password-box .lock-icon { font-size: 40px; margin-bottom: 1rem; display: block; }
+.password-box h2 { font-size: 18px; font-weight: 700; margin-bottom: 4px; }
+.password-box p  { font-size: 13px; color: var(--text-muted); margin-bottom: 1.25rem; }
+.password-box input {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-family: 'Cairo', sans-serif;
+  font-size: 15px;
+  text-align: center;
+  letter-spacing: 3px;
+  margin-bottom: 10px;
+  outline: none;
+}
+.password-box input:focus { border-color: var(--green-main); }
+.pass-error {
+  font-size: 13px;
+  color: #dc2626;
+  margin-bottom: 10px;
+  display: none;
+}
