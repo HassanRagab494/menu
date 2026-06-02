@@ -293,9 +293,10 @@ window.copyImage = async function () {
 /* ── auto-init based on current page ── */
 document.addEventListener("DOMContentLoaded", () => {
   const page = location.pathname.split("/").pop();
-  if (page === "admin.html") {
-    window.initAdminPage();
-  } else {
-    window.initMenuPage();
-  }
+  
+if (location.pathname.includes("admin")) {
+  window.initAdminPage();
+} else {
+  window.initMenuPage();
+}
 });
